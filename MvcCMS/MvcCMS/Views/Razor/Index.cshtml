@@ -1,0 +1,24 @@
+﻿@model System.Data.Entity.DbSet<MvcCMS.Models.Post>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学习Razor</title>
+</head>
+<body>
+    <div>
+        @Model.Count()
+        @foreach (var post in Model)
+        {
+            <div>
+                <h3>@post.Title</h3>
+                <div>@post.Body</div>
+            </div>
+        }
+    </div>
+    @Html.Partial("_LogOnPartial")
+    @Html.ActionLink("homepage","Index","Home")
+</body>
+</html>
