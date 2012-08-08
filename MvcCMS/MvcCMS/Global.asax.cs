@@ -24,7 +24,8 @@ namespace MvcCMS
             routes.MapRoute(
                 "Default", // 路由名称
                 "{controller}/{action}/{id}", // 带有参数的 URL
-                new { controller = "Razor", action = "Index", id = UrlParameter.Optional } // 参数默认值
+                new { controller = "Razor", action = "Index", id = UrlParameter.Optional }, // 参数默认值
+                new[] { "MvcCMS.Controllers" }
             );
 
         }

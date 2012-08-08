@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>后台管理系统首页</title>
+    <link href="@Url.Content("~/Common/EasyUI/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Common/EasyUI/themes/default/easyui.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Common/EasyUI/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Common/EasyUI/locale/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Common/EasyUI/easyloader.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#p').panel({
+                width: 500,
+                height: 150,
+                title: 'My Panel',
+                tools: [{
+                    iconCls: 'icon-add',
+                    handler: function () { alert('new'); }
+                }, { iconCls: 'icon-save',
+                    handler: function () { alert('save'); }
+                }]
+            });
+        });
+        function open1() {
+            $('#p').panel('open');
+        }
+        function close1() {
+            $('#p').panel('close');
+        }
+    </script>
+</head>
+<body>
+    <div id="p" style="padding: 10px;">
+        <p>
+            panel content.</p>
+        <p>
+            panel content.</p>
+    </div>
+    <a href="#" class="easyui-linkbutton" onclick="javascript:open1();">Open</a> 
+    <a href="#" class="easyui-linkbutton" onclick="javascript:close1();">Close</a>
+</body>
+</html>

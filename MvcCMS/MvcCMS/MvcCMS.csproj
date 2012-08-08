@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
@@ -413,7 +414,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Controllers\" />
     <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Shared\" />
   </ItemGroup>
@@ -422,6 +422,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Administration\Views\Web.config" />
+    <Content Include="Areas\Administration\Views\Default\Index.cshtml" />
     <None Include="Common\EasyUI\themes\default\images\Thumbs.db" />
     <None Include="Common\EasyUI\themes\gray\images\Thumbs.db" />
     <Content Include="Views\Razor\Index.cshtml" />
