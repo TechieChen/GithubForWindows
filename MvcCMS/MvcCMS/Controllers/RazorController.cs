@@ -14,6 +14,7 @@ namespace MvcCMS.Controllers
 
         public ActionResult Index()
         {
+
             var posts = new MvcContext().Posts;
             //ViewData["Posts"] = posts;
             return View("Index",posts);
